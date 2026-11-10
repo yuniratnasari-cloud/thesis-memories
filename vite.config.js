@@ -34,6 +34,7 @@ for (const [variableName, filePath] of [
 }
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/thesis-memories/' : '/',
   server: resolvedCertificatePath
     ? {
         host: '0.0.0.0',
